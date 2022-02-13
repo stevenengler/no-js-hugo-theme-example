@@ -1,0 +1,1 @@
+# no-js-hugo-theme-example
