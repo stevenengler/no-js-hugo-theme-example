@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Notebook</title>
+    <link>https://stevenengler.github.io/no-js-hugo-theme-example/posts/</link>
+    <description>Recent content in Posts on Notebook</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 12 Jun 2021 14:41:00 +0000</lastBuildDate><atom:link href="https://stevenengler.github.io/no-js-hugo-theme-example/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Second Post</title>
+      <link>https://stevenengler.github.io/no-js-hugo-theme-example/posts/second/</link>
+      <pubDate>Sat, 12 Jun 2021 14:41:00 +0000</pubDate>
+      
+      <guid>https://stevenengler.github.io/no-js-hugo-theme-example/posts/second/</guid>
+      <description>Introduction Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam venenatis velit justo, ac mattis sem pulvinar pellentesque. Sed rutrum eu enim eleifend accumsan. Mauris ante mi, posuere ut feugiat in, blandit nec leo. Fusce vel massa ullamcorper, maximus augue a, viverra enim. Phasellus feugiat, elit maximus aliquet vehicula, orci mauris placerat odio, quis congue lacus.nulla() a nulla. Aenean congue in diam at ultricies. Etiam consectetur orci rhoncus feugiat pharetra. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</description>
+    </item>
+    
+    <item>
+      <title>First Post</title>
+      <link>https://stevenengler.github.io/no-js-hugo-theme-example/posts/first/</link>
+      <pubDate>Fri, 21 May 2021 16:53:00 +0000</pubDate>
+      
+      <guid>https://stevenengler.github.io/no-js-hugo-theme-example/posts/first/</guid>
+      <description>Nunc ultrices sed nisi sed interdum. Sed sagittis viverra nunc, et eleifend metus fringilla sed. Vestibulum pharetra erat eros, sit amet bibendum risus aliquam at. Quisque at semper leo, nec placerat velit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pulvinar auctor interdum. In sed urna quis nisi consequat accumsan vitae eget est. Nullam rhoncus, odio in aliquam dignissim, orci urna venenatis nibh, in aliquet massa arcu nec enim. Suspendisse aliquam interdum mauris, quis convallis tellus varius sit amet.</description>
+    </item>
+    
+  </channel>
+</rss>
