@@ -1,0 +1,56 @@
+name: Build and publish example site
+
+on:
+  # once per day
+  schedule:
+    - cron: "0 0 * * *"
+
+  # run manually from the GitHub Actions webpage
+  workflow_dispatch:
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        path: pages
+
+    - name: Checkout stevenengler/no-js-hugo-theme
+      uses: actions/checkout@v2
+      with:
+        repository: stevenengler/no-js-hugo-theme
+        path: no-js-hugo-theme
+
+    - name: Install hugo
+      run: |
+        wget -O hugo.deb https://github.com/gohugoio/hugo/releases/download/v0.92.1/hugo_0.92.1_Linux-64bit.deb
+        sudo apt-get install -y ./hugo.deb
+
+    - name: Build
+      run: |
+        cd no-js-hugo-theme
+        mkdir exampleSite/themes
+        ln -sT "$(pwd)" exampleSite/themes/no-js-hugo-theme
+        sed -i 's/baseURL.*/baseURL = "https:\/\/stevenengler.github.io\/no-js-hugo-theme-example\/"/' exampleSite/config.toml
+        cd exampleSite && hugo
+
+    - name: Copy
+      run: |
+        rm -rf pages/docs
+        mv no-js-hugo-theme/exampleSite/public pages/docs
+
+    - name: Commit
+      run: |
+        COMMIT="$(cd no-js-hugo-theme && git rev-parse --short HEAD)"
+        cd pages
+        git config user.name github-actions
+        git config user.email github-actions@github.com
+        git add .
+        git diff-index --quiet HEAD || git commit -m "Generated docs for stevenengler/no-js-hugo-theme@$COMMIT"
+        git push
