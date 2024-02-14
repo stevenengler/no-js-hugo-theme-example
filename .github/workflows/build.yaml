@@ -17,15 +17,16 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
       with:
         path: pages
 
     - name: Checkout stevenengler/no-js-hugo-theme
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
       with:
         repository: stevenengler/no-js-hugo-theme
         path: no-js-hugo-theme
+        persist-credentials: false
 
     - name: Install hugo
       run: |
