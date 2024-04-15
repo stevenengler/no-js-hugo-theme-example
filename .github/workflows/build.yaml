@@ -38,7 +38,7 @@ jobs:
         cd no-js-hugo-theme
         mkdir exampleSite/themes
         ln -sT "$(pwd)" exampleSite/themes/no-js-hugo-theme
-        sed -i 's/baseURL.*/baseURL = "https:\/\/stevenengler.github.io\/no-js-hugo-theme-example\/"/' exampleSite/config.toml
+        sed -i 's/baseURL.*/baseURL = "https:\/\/stevenengler.github.io\/no-js-hugo-theme-example\/"/' exampleSite/hugo.toml
         cd exampleSite && hugo
 
     - name: Copy
